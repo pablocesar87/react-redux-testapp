@@ -1,0 +1,30 @@
+{
+    "plugins": [
+      [
+        "wrap-in-js",
+        {
+          "extensions": ["css$", "scss$"]
+        }
+      ],
+      [
+        "module-resolver",
+        {
+          "root": ["./"],
+          "alias": {
+            "@common": "./app/common",
+            "@routes": "./app/routes",
+            "@utils": "./app/utils",
+            "@store": "./app/store",
+            "@actions": "./app/store/actions",
+            "@reducers": "./app/store/reducers",
+            "@selectors": "./app/store/selectors",
+            "@styles": "./app/styles"
+          }
+        }
+      ]
+    ],
+    "presets": [
+      "next/babel"
+    ],
+    "ignore": []
+  }

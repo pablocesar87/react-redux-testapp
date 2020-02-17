@@ -1,0 +1,14 @@
+version: '2'
+services:
+  webpack:
+    build:
+      context: .
+      dockerfile: ./compose/Dockerfile.dev
+    command: yarn dev
+    volumes:
+      - .:/code
+    ports:
+      - "3000:3000"
+volumes:
+  webpack:
+    driver: local
